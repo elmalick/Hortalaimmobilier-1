@@ -1,0 +1,87 @@
+htl_immobilier_homepage:
+    path:     /
+    defaults: { _controller: HTLImmobilierBundle:Default:index }
+accueil:
+    path:     /front/bien/accueil
+    defaults: { _controller: HTLImmobilierBundle:Front:accueil }
+search:
+    path:     /front/bien/search
+    defaults: { _controller: HTLImmobilierBundle:Front:searchBien }
+reserver:
+    path:     /front/bien/
+    defaults: { _controller: HTLImmobilierBundle:Front:reserverBien }
+listebien:
+    path:     /front/bien/listebien
+    defaults: { _controller: HTLImmobilierBundle:Front:listeBien }
+searchprix:
+    path:     /front/bien/prix
+    defaults: { _controller: HTLImmobilierBundle:Front:searchPrix}
+searchlocalite:
+    path:     /front/bien/localite
+    defaults: { _controller: HTLImmobilierBundle:Localite:searchLocalite }
+listeadmin:
+    path:     /front/bien/admin
+    defaults: { _controller: HTLImmobilierBundle:Front:listeAdmin }
+listereservation:
+    path:     /front/bien/reservation
+    defaults: { _controller: HTLImmobilierBundle:Front:listeReservation }
+details:
+    path:     /front/bien/details
+    defaults: { _controller: HTLImmobilierBundle:Front:detailsReservation }
+contrat:
+    path:     /front/bien/contrat
+    defaults: { _controller: HTLImmobilierBundle:Front:contratReservation }
+listetype:
+    path:     /front/bien/bientype
+    defaults: { _controller: HTLImmobilierBundle:Typebien:addTypebien }
+listelocalite:
+    path:     /front/bien/listelocalite
+    defaults: { _controller: HTLImmobilierBundle:Front:listelocalite }
+Localite_index:
+  path:     /index
+  defaults: { _controller: HTLImmobilierBundle:Bien:index }
+  methods:  GET
+Localite_show:
+  path:     /{id}/show
+  defaults: { _controller: HTLImmobilierBundle:Localite:show }
+  methods:  GET
+Localite_new:
+  path:     /new
+  defaults: { _controller: HTLImmobilierBundle:Localite:new }
+  methods:  [GET, POST]
+Localite_edit:
+  path:     /{id}/edit
+  defaults: { _controller: HTLImmobilierBundle:Localite:edit }
+  methods:  [GET, POST]
+Localite_delete:
+  path:     /{id}/delete
+  defaults: { _controller: HTLImmobilierBundle:Localite:delete }
+  methods:  DELETE
+Typebien_index:
+  path:     /index
+  defaults: { _controller: HTLImmobilierBundle:Typebien:index }
+  methods:  GET
+Typebien_show:
+  path:     /{id}/show
+  defaults: { _controller: HTLImmobilierBundle:Typebien:show }
+  methods:  GET
+Typebien_new:
+  path:     /new
+  defaults: { _controller: HTLImmobilierBundle:Typebien:new }
+  methods:  [GET, POST]
+Typebien_edit:
+  path:     /{id}/edit
+  defaults: { _controller: HTLImmobilierBundle:Typebien:edit }
+  methods:  [GET, POST]
+Typebien_delete:
+  path:     /{id}/delete
+  defaults: { _controller: HTLImmobilierBundle:Typebien:delete }
+  methods:  DELETE
+admin:
+    path:     /admin
+    defaults: { _controller: HTLImmobilierBundle:admin:admin }
+  
+
+
+
+

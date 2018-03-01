@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Localites list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Libellelocalite</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for localite in localites %}
+            <tr>
+                <td><a href="{{ path('localite_show', { 'id': localite.id }) }}">{{ localite.id }}</a></td>
+                <td>{{ localite.libellelocalite }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('localite_show', { 'id': localite.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('localite_edit', { 'id': localite.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('localite_new') }}">Create a new localite</a>
+        </li>
+    </ul>
+{% endblock %}
